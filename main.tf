@@ -1,4 +1,6 @@
-provider "azurerm" {}
+provider "azurerm" {
+features {}
+}
 resource "azurerm_network_security_group" "example" {
   name                = "acceptanceTestSecurityGroup1"
   location            = "eastus"
