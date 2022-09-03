@@ -1,6 +1,6 @@
-#provider "azurerm" {
-#features {}
-#}
+provider "azurerm" {
+features {}
+}
 resource "azurerm_network_security_group" "example" {
   name                = var.nsg_names[count.index]
   location            = "eastus"
@@ -22,7 +22,7 @@ resource "azurerm_network_security_group" "example" {
   
   variable "nsg_names" {
     default=["nsg1","nsg2","nsg3"]
-  }
+  
     
 
   tags = {
