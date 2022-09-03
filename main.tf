@@ -23,8 +23,3 @@ resource "azurerm_network_security_group" "example" {
   variable "nsg_names" {
     default=["nsg1","nsg2","nsg3"]
   }
-    
-
-  #tags = {
-  #  environment = "Production"
-  #}
