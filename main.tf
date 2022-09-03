@@ -18,6 +18,7 @@ resource "azurerm_network_security_group" "example" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+}
   
   variable "nsg_names" {
     default=["nsg1","nsg2","nsg3"]
@@ -27,4 +28,3 @@ resource "azurerm_network_security_group" "example" {
   #tags = {
   #  environment = "Production"
   #}
-}
