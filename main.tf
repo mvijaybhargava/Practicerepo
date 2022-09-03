@@ -2,9 +2,10 @@ provider "azurerm" {
 features {}
 }
 resource "azurerm_network_security_group" "example" {
-  name                = "acceptanceTestSecurityGroup1"
+  name                = var.nsg_names[count.index]
   location            = "eastus"
   resource_group_name = "rg"
+  count = 2
 
   security_rule {
     name                       = "test123"
@@ -17,6 +18,11 @@ resource "azurerm_network_security_group" "example" {
     source_address_prefix      = "*"
     destination_address_prefix = "*"
   }
+  
+  variable "nsg_names" {
+    default=["nsg1","nsg2","nsg3"]
+  }
+    
 
   #tags = {
   #  environment = "Production"
