@@ -28,3 +28,4 @@ resource "azurerm_network_security_group" "example" {
   tags = {
     environment = "Production"
   }
+
